@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Extended_list_view.MoreInfo">
+
+    <StackLayout>
+        <Label Text="Qoute from the Show" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Label Text="{Binding MoreD}"/>
+        <Button Text="Link for even more enough" Clicked="Handle_B_Clicked" CommandParameter="{Binding URL}"/>
+    </StackLayout>
+        
+    
+</ContentPage>
