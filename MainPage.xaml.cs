@@ -12,7 +12,7 @@ namespace Extended_list_view
 {
 	public partial class MainPage : ContentPage
 	{
-        protected ObservableCollection<ANIME>SecCollection = new ObservableCollection<ANIME>();
+        
         public MainPage()
 		{
 			InitializeComponent();
@@ -108,14 +108,7 @@ namespace Extended_list_view
             VCell.ItemsSource = AniCollection;
 
 
-            SecCollection.Add(Anime0);
-            SecCollection.Add(Anime1);
-            SecCollection.Add(Anime2);
-            SecCollection.Add(Anime3);
-            SecCollection.Add(Anime4);
-            SecCollection.Add(Anime5);
-            SecCollection.Add(Anime6);
-            SecCollection.Add(Anime7);
+           
         }
 
         void Handle_M_Clicked(object sender, System.EventArgs e)
@@ -149,12 +142,7 @@ namespace Extended_list_view
         void Handle_Refreshing(object sender, System.EventArgs e)
         {
             VCell.IsRefreshing = false;
-            var listT = new ObservableCollection<ANIME>();
-            foreach(ANIME item in SecCollection)
-            {
-                listT.Add(item);
-            }
-            VCell.ItemsSource = listT;
+            Populate();
         }
 
     }
